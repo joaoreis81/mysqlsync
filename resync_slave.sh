@@ -7,7 +7,7 @@ SLAVE_USER=root
 SLAVE_PASS=slavepasswd
 REP_USER=slave
 REP_PASS=replicationpasswd
-DATABASE=dbispconfig
+DATABASE=database
 
 /usr/bin/mysql -u$MASTER_USER -h $MASTER_HOST mysql -p$MASTER_PASS -e 'FLUSH TABLES WITH READ LOCK;'
 LOGPOS=`/usr/bin/mysql -u$MASTER_USER -h $MASTER_HOST mysql -p$MASTER_PASS -e 'SHOW MASTER STATUS'|grep mysql-bin`
